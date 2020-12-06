@@ -3,6 +3,7 @@
 //  CryptoCurrencies
 //
 //  Created by Ed Penano on 12/4/20.
+// https://edpenano.com
 //
 
 import SwiftUI
