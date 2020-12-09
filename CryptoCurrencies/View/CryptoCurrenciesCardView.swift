@@ -11,6 +11,8 @@ import SwiftUI
 struct CryptoCurrenciesCardView: View {
     // MARK: - PROPERTIES
     
+    @State private var isAnimating: Bool = false
+    
     // MARK: - BODY
     var body: some View {
         ZStack {
@@ -37,6 +39,7 @@ struct CryptoCurrenciesCardView: View {
                     .frame(maxWidth: 480)
                 
                 // CRYPTOCURRENCY: BUTTON
+                StartButtonView()
                 
                 
             } //: VSTACK
