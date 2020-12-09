@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0A8A4F2580BC5700589A5D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0A8A4E2580BC5700589A5D /* OnboardingView.swift */; };
 		AB80BDD3257E2653006093A0 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80BDD2257E2653006093A0 /* StartButtonView.swift */; };
 		ABD4C8A8257CCD0F009BD5C5 /* CryptoCurrenciesCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD4C8A7257CCD0F009BD5C5 /* CryptoCurrenciesCardView.swift */; };
 		ABED5E03257AF13900DFDAAB /* CryptoCurrenciesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED5E02257AF13900DFDAAB /* CryptoCurrenciesApp.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB0A8A4E2580BC5700589A5D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		AB80BDD2257E2653006093A0 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 		ABD4C8A7257CCD0F009BD5C5 /* CryptoCurrenciesCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrenciesCardView.swift; sourceTree = "<group>"; };
 		ABED5DFF257AF13900DFDAAB /* CryptoCurrencies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCurrencies.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 			children = (
 				ABED5E02257AF13900DFDAAB /* CryptoCurrenciesApp.swift */,
 				ABED5E04257AF13900DFDAAB /* ContentView.swift */,
+				AB0A8A4E2580BC5700589A5D /* OnboardingView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				ABED5E05257AF13900DFDAAB /* ContentView.swift in Sources */,
 				AB80BDD3257E2653006093A0 /* StartButtonView.swift in Sources */,
 				ABED5E03257AF13900DFDAAB /* CryptoCurrenciesApp.swift in Sources */,
+				AB0A8A4F2580BC5700589A5D /* OnboardingView.swift in Sources */,
 				ABD4C8A8257CCD0F009BD5C5 /* CryptoCurrenciesCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +447,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CryptoCurrencies/Preview Content\"";
+				DEVELOPMENT_TEAM = W65LVHG77L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CryptoCurrencies/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -464,6 +469,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CryptoCurrencies/Preview Content\"";
+				DEVELOPMENT_TEAM = W65LVHG77L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CryptoCurrencies/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
