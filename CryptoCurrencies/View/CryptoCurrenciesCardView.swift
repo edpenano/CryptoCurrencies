@@ -11,6 +11,8 @@ import SwiftUI
 struct CryptoCurrenciesCardView: View {
     // MARK: - PROPERTIES
     
+    var currency: cryptoCurrency //bring in cryptoCurrency data model
+    
     @State private var isAnimating: Bool = false
     
     // MARK: - BODY
@@ -18,7 +20,7 @@ struct CryptoCurrenciesCardView: View {
         ZStack {
             VStack(spacing: 20) {
                 // CRYPTOCURRENCY: IMAGE
-                Image("xrp")
+                Image(currency.image)
                     .resizable()
                     .scaledToFit()
                     // add drop-shadow
@@ -26,14 +28,14 @@ struct CryptoCurrenciesCardView: View {
                     .scaleEffect(isAnimating ? 1.0 : 0.8)
                 
                 // CRYPTOCURRENCY: TITLE
-                Text("XRP")
+                Text(currency.title)
                     .foregroundColor(Color.white)
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                     .shadow(color: Color(red: 0 , green: 0, blue: 0, opacity: 0.15), radius: 2, x: 2, y: 2)
                 
                 // CRYPTOCURRENCY: HEADLINE
-                Text("XRP is a digital asset built for payments and settles transactions in 3-5 seconds.")
+                Text(currency.headline)
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 16)
@@ -53,7 +55,7 @@ struct CryptoCurrenciesCardView: View {
             isAnimating = false
         }
         .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxHeight: .infinity, alignment: .center)
-        .background(LinearGradient(gradient: Gradient(colors: [Color("ColorBlueberryLight"), Color("ColorBlueberryDark")]), startPoint: .top, endPoint: .bottom))
+        .background(LinearGradient(gradient: Gradient(colors: currency.gradientColors), startPoint: .top, endPoint: .bottom))
         .cornerRadius(20)
         // Adds padding to the entire card
         .padding(.horizontal, 20)
@@ -64,7 +66,7 @@ struct CryptoCurrenciesCardView: View {
 
 struct CryptoCurrenciesCardView_Previews: PreviewProvider {
     static var previews: some View {
-        CryptoCurrenciesCardView()
+        CryptoCurrenciesCardView(currency: cryptoCurrencyData[0])
             .previewLayout(.fixed(width: 320, height: 640))
     }
 }
