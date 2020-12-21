@@ -10,14 +10,15 @@ import SwiftUI
 struct OnboardingView: View {
     // MARK: - PROPERTIES
     
+    var currency: [cryptoCurrency] = cryptoCurrencyData
+    
     // MARK: - BODY
     
     var body: some View {
         TabView {
-            ForEach(0..<5) { item in
-//                CryptoCurrenciesCardView()
-                Text("cards")
-            }
+            ForEach(currency[0...2]) { item in
+                CryptoCurrenciesCardView(currency: item)
+            } //: LOOP
         }  //: TAB
         .tabViewStyle(PageTabViewStyle())
         .padding(.vertical, 20)
@@ -28,6 +29,7 @@ struct OnboardingView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+//        OnboardingView(currency: CryptoCurrencies)
+        Text("hello")
     }
 }
