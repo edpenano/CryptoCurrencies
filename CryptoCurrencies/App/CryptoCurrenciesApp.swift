@@ -10,9 +10,15 @@ import SwiftUI
 
 @main
 struct CryptoCurrenciesApp: App {
+    @AppStorage("isOnboarding") var isOnboarding: Bool = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isOnboarding {
+                OnboardingView()
+            } else {
+                ContentView()
+            }
         }
     }
 }

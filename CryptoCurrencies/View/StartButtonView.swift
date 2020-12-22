@@ -2,23 +2,24 @@
 //  StartButtonView.swift
 //  CryptoCurrencies
 //
-//  Created by Karen Lee on 12/7/20.
+//  Created by Ed Penano on 12/7/20.
+// https://edpenano.com
 //
 
 import SwiftUI
 
 struct StartButtonView: View {
     // MARK: - PROPERTIES
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
     
     // MARK: - BODY
     
     var body: some View {
         Button(action: {
-            print("Exit onboarding")
+            isOnboarding = false
         }) {
             HStack(spacing: 8) {
                 Text("Start")
-                
                 Image(systemName: "arrow.right.circle")
                     .imageScale(.large)
             }

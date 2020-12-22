@@ -2,7 +2,8 @@
 //  OnboardingView.swift
 //  CryptoCurrencies
 //
-//  Created by Karen Lee on 12/9/20.
+//  Created by Ed Penano on 12/9/20.
+// https://edpenano.com
 //
 
 import SwiftUI
@@ -29,7 +30,7 @@ struct OnboardingView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-//        OnboardingView(currency: CryptoCurrencies)
-        Text("hello")
+        OnboardingView(currency: cryptoCurrencyData)
+//        Text("hello")
     }
 }
