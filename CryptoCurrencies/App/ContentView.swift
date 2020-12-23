@@ -9,14 +9,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: - PROPERTIES
+    var cryptoCurrency: [cryptoCurrency] = cryptoCurrencyData
+    
+    // MARK: - BODY
+    
     var body: some View {
-//        OnboardingView()
-        Text("Hello Content")
+        NavigationView {
+            List {
+                ForEach(cryptoCurrency.shuffled()) { item in
+                    CryptoCurrencyRowView(cryptoCurrency: item)
+                        .padding(.vertical, 4)
+                }
+            }
+            .navigationTitle("Cryptocurrencies")
+        } //: NAVIGATION
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        ContentView(cryptoCurrency: cryptoCurrencyData)
     }
 }
