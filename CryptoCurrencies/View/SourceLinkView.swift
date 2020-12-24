@@ -2,7 +2,8 @@
 //  SourceLinkView.swift
 //  CryptoCurrencies
 //
-//  Created by Karen Lee on 12/24/20.
+//  Created by Ed Penano on 12/24/20.
+// https://edpenano.com
 //
 
 import SwiftUI

@@ -46,6 +46,8 @@ struct CryptoDetailView: View {
                         
                         //LINK - adding link (example usage: to give credit)
                         SourceLinkView()
+                            .padding(.top, 10)
+                            .padding(.bottom, 40)
                         
                     } //: VSTACK
                     .padding(.horizontal, 20)
