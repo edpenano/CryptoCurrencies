@@ -18,6 +18,7 @@ struct CryptoCurrenciesApp: App {
                 OnboardingView()
             } else {
                 ContentView()
+//                OnboardingView()
             }
         }
     }

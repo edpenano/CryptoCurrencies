@@ -18,8 +18,11 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(cryptoCurrency.shuffled()) { item in
-                    CryptoCurrencyRowView(cryptoCurrency: item)
-                        .padding(.vertical, 4)
+                    // NAVIGATION LINK - automatically switches to CryptoDetailView
+                    NavigationLink(destination: CryptoDetailView(currency: item)) {
+                        CryptoCurrencyRowView(cryptoCurrency: item)
+                            .padding(.vertical, 4)
+                    }
                 }
             }
             .navigationTitle("Cryptocurrencies")
