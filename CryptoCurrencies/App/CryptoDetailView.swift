@@ -34,6 +34,7 @@ struct CryptoDetailView: View {
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                         
                         // CURRENT PRICE
+                        CryptoCurrencyInfoView(currencyInfo: currency)
                         
                         // SUBHEADING
                         Text("Learn more about \(currency.title)".uppercased())
