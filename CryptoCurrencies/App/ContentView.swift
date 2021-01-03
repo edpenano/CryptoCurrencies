@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: - PROPERTIES
+    @State private var isShowingSettings: Bool = false
+    
     var cryptoCurrency: [cryptoCurrency] = cryptoCurrencyData
     
     // MARK: - BODY
@@ -26,6 +28,17 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Cryptocurrencies")
+            .navigationBarItems(
+                trailing:
+                    Button(action: {
+                        isShowingSettings = true
+                    }) {
+                        Image(systemName: "slider.horizontal.3")
+                    } //: END OF BUTTON
+                    .sheet(isPresented: $isShowingSettings) {
+                        SettingsView()
+                    }
+            )
         } //: NAVIGATION
     }
 }
