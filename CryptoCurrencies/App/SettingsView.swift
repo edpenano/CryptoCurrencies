@@ -13,6 +13,7 @@ struct SettingsView: View {
     // MARK: - PROPERTIES
     // method to dismiss Settings View
     @Environment(\.presentationMode) var presentationMode
+    @AppStorage("isOnboarding") var isOnboarding: Bool = false
     
     // MARK: - BODY
     
@@ -41,8 +42,35 @@ struct SettingsView: View {
                     } //: BOX
                     
                     // MARK: - SECTION 2
-                    
-                    
+                    GroupBox(
+                        label: SettingsLabelView(labelText: "Customization", labelImage: "paintbrush")
+                    ) {
+                        Divider().padding(.vertical, 4)
+                        
+                        Text("Restart the application by toggling the switch in this box so you can see the welcome screen again.")
+                            .padding(.vertical, 8)
+                            .frame(minHeight: 60)
+                            .layoutPriority(1)
+                            .font(.footnote)
+                            .multilineTextAlignment(.leading)
+                        
+                        Toggle(isOn: $isOnboarding) {
+                            if isOnboarding {
+                                Text("Restarted".uppercased())
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color.green)
+                            } else {
+                                Text("Restart".uppercased())
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color.secondary)
+                            }
+                        }
+                        .padding()
+                        .background(
+                            Color(UIColor.tertiarySystemBackground)
+                                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                        )
+                    }
                     
                     // MARK: - SECTION 3
                     GroupBox(
